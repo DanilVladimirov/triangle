@@ -52,6 +52,21 @@ namespace triangle
             return Math.Sqrt(a * b * (s + c) * (s - c)) / s;
         }
 
+        public void setA(double a)
+        {
+            this.a = a;
+        }
+
+        public void setB(double b)
+        {
+            this.b = b;
+        }
+
+        public void setC(double c)
+        {
+            this.c = c;
+        }
+
         public double calculatePerimeter()
         {
             return a + b + c;
