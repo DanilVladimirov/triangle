@@ -7,18 +7,12 @@ namespace triangle
         private double a;
         private double b;
         private double c;
-        private double angleA;
-        private double angleB;
-        private double angleC;
 
         public Triangle()
         {
             a = 0;
             b = 0;
             c = 0;
-            angleA = 0;
-            angleB = 0;
-            angleC = 0;
         }
 
         public Triangle(double a, double b, double c)
@@ -85,6 +79,21 @@ namespace triangle
         public double calculateAreaWithR(double r)
         {
             return (a * b * c) / 4*r;
+        }
+
+        public double getAngleA()
+        {
+            return Math.Cos((Math.Pow(a, 2) + Math.Pow(c, 2) - Math.Pow(b, 2)) / 2 * a * c);
+        }
+
+        public double getAngleB()
+        {
+            return Math.Cos((Math.Pow(a, 2) + Math.Pow(b, 2) - Math.Pow(c, 2)) / 2 * a * b);
+        }
+
+        public double getAngleY()
+        {
+            return Math.Cos((Math.Pow(b, 2) + Math.Pow(c, 2) - Math.Pow(a, 2)) / 2 * c * b);
         }
     }
 }
